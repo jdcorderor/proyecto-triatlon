@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Progreso - Triatlón Carabobo 2025</title>
+    <link rel='icon' href='../../assets/logo.ico'>
+    <link rel='stylesheet' href='../styles/styles.css'>
+    <script src='../scripts/script.js' defer></script>
+</head>
+<body style='background-color: #dac5c5;'>
+    <button type='button' id='back-button2' onclick='window.location.href="../index.html"'></button>
+    <div id='main-progress-container'>
+        <h1 style='font-size: 7vh;'>Progreso del Triatlón</h1>
+        <hr>
+        <h3 id='date'>FECHA:</h3>
+        <h3 id='start-time'>HORA DE INICIO:</h3>
+        <h3 id='end-time'>HORA DE FINALIZACIÓN:</h3>
+        <div id='progress-container'>
+            <table id='progress-table'>
+                <thead style='font-family: "Antonio"; font-size: 1.2em;'>
+                    <tr>
+                        <th colspan='4'>Participante</th>
+                        <th colspan='4'>Caminata 10K</th>
+                        <th colspan='4'>Natación 10K</th>
+                        <th colspan='4'>Ciclismo 30K</th>
+                        <th colspan='4'>General</th>
+                    </tr>
+                    <tr style='background-color: #945656;'>
+                        <td>C.I.</td>
+                        <td>Nombre</td>
+                        <td>Municipio</td>
+                        <td>Edad</td>
+                        <td>Hora inicio</td>
+                        <td>Hora fin</td>
+                        <td>Distancia</td>
+                        <td>Tiempo</td>
+                        <td>Hora inicio</td>
+                        <td>Hora fin</td>
+                        <td>Distancia</td>
+                        <td>Tiempo</td>
+                        <td>Hora inicio</td>
+                        <td>Hora fin</td>
+                        <td>Distancia</td>
+                        <td>Tiempo</td>
+                        <td>Distancia total</td>
+                        <td>Tiempo de recorrido</td>
+                        <td>Hora fin</td>
+                        <td>Status</td>
+                    </tr>
+                </thead>
+                <tbody id='progress-table-body'>
+                </tbody>
+            </table>
+        </div>
+        <div class='button-group'>
+            <button id='start-button'>Iniciar</button>
+            <button id='restart-button'>Reiniciar</button>
+        </div>
+    </div>
+    <div id='configuration-modal' class='modal'>
+        <div class='modal-content'>
+            <h3 id='configuration-title'>Configuración del Triatlón</h3>
+            <form id='configuration-form'>
+                <label for='date-input'>Fecha (MM/DD/AA)</label>
+                <input type='date' id='date-input' class='date-input' required>
+                <br>
+                <label>Hora de inicio (HH:MM:SS)</label>
+                <div id='time-container'>
+                    <input type='number' id='start-hour' name='start-hour' min='00' max='23' value='00' required> :
+                    <input type='number' id='start-minute' name='start-minute' min='00' max='59' value='00' required> :
+                    <input type='number' id='start-second' name='start-second' min='00' max='59' value='00' required>
+                </div>
+                <br>
+                <label for='speed'>Velocidad de reproducción</label>
+                <select name='speed' id='speed' required>
+                    <option value='' disabled selected>Seleccione una velocidad de reproducción</option>
+                    <option value='0.25'>0.25x</option>
+                    <option value='0.5'>0.5x</option>
+                    <option value='0.75'>0.75x</option>
+                    <option value='1'>1x</option>
+                    <option value='2'>2x</option>
+                    <option value='3'>3x</option>
+                    <option value='4'>4x</option>
+                    <option value='5'>5x</option>
+                    <option value='10'>10x</option>
+                    <option value='100'>100x</option>
+                    <option value='1000'>1000x</option>
+                </select>
+                <div class='button-group'>
+                    <button type='submit'>Continuar</button>
+                    <button type='button' onclick='window.location.href="participants.html"'>Volver</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

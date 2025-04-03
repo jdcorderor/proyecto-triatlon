@@ -269,7 +269,7 @@ tbody td {
     text-align: center;
 }
 
-tbody tr:hover {
+table:not(#progress-table) tbody tr:hover {
     background-color: #e6afaf;
     cursor: pointer;
     transform: scaleY(1.05);
